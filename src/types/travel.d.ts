@@ -4,7 +4,7 @@ export interface FlightOption {
     price: number;
 }
 
-export interface Passanger {
+export interface Passenger {
     id: number;
     fullName: string;
     dateOfBirth: string;
@@ -23,7 +23,7 @@ export interface TravelDetails {
 
 export interface TravelerInfo {
     numberOfTravelers: number;
-    passangers: Passanger [];
+    passengers: Passenger [];
     hasPets: boolean;
     numberOfPets: number;
     hasExtraLuggage: boolean;
