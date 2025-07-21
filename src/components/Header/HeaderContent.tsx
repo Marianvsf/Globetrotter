@@ -31,6 +31,7 @@ const HeaderContent: React.FC = () => {
     return (
 
         <header>
+
             <div id="default-carousel" className="relative w-full" data-carousel="slide">
                 {/* <!-- Carousel wrapper --> */}
                 <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -86,6 +87,9 @@ const HeaderContent: React.FC = () => {
                     </span>
                 </button>
             </div>
+            <h1 className="m-auto p-10 text-3xl font-extrabold text-white">¡Conoce los Viajes!<small className="ms-2 font-semibold text-gray-500 dark:text-gray-400">
+                Te damos la bienvenida a una mejor forma de planificar tu viaje, todo comienza justo aquí.</small>
+            </h1>
         </header>
 
     );
