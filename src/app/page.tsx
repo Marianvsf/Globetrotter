@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Navbar/Navbar";
+import TravelForm from "@/components/TravelForm/TravelForm";
 import Image from "next/image";
 
 
@@ -13,6 +14,7 @@ export default function Home() {
         <main>
           <div className="m-auto max-w-screen-xl">
             <Header />
+            <TravelForm />
           </div>
         </main>
       </div>
