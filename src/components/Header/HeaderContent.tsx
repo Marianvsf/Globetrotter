@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 
-const HeaderContent = () => {
+const HeaderContent: React.FC = () => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const images: string[] = [
@@ -10,20 +10,21 @@ const HeaderContent = () => {
         "https://images.pexels.com/photos/930595/pexels-photo-930595.jpeg",
         "https://images.pexels.com/photos/1060803/pexels-photo-1060803.jpeg",
         "https://images.pexels.com/photos/2438323/pexels-photo-2438323.jpeg",
+        "https://www.rionegro.com.ar/wp-content/uploads/2023/08/mar-del-plata-playas-mar-del-plata-3-1.jpg"
     ];
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-        }, 3000);
+        }, 4000);
         return () => clearInterval(interval);
     }, [images.length]);
 
-    const handlePrev = () => {
+    const handlePrev = (): void => {
         setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     };
 
-    const handleNext = () => {
+    const handleNext = (): void => {
         setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
@@ -41,7 +42,7 @@ const HeaderContent = () => {
                         >
                             <img
                                 src={image}
-                                className="w-full h-full object-cover"
+                                className="absolute block w-full h-full object-cover"
                                 alt={`Slide ${index + 1}`}
                             />
                         </div>

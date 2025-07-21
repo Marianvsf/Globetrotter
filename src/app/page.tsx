@@ -1,15 +1,21 @@
 "use client";
 
 import Header from "@/components/Header/Header";
+import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
 
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <Header />
-      </main>
+    <>
+      <div className="m-auto container">
+        <Navbar />
+        <main>
+          <div className="m-auto max-w-screen-xl">
+            <Header />
+          </div>
+        </main>
+      </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -57,6 +63,6 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
+    </>
   );
 }
