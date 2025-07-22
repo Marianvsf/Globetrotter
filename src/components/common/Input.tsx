@@ -1,7 +1,9 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { }
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    customProp?: string;
+ }
 
 export const Input: React.FC<InputProps> = ({ className, ...props }) => {
     const baseClasses =

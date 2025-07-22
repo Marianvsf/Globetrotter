@@ -1,7 +1,9 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> { }
+interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+    customProp?: string;
+}
 
 export const Textarea: React.FC<TextareaProps> = ({ className, ...props }) => {
     const baseClasses =

@@ -2,7 +2,7 @@
 
 import { fetchFlightOptions } from '@/lib/api';
 import { AdditionalServices, FlightOption, FormData, TravelDetails, TravelerInfo } from '@/types/travel';
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import Step1Form from './Step1Form';
 import Step2Form from './Step2Form';
@@ -49,7 +49,9 @@ const TravelForm: React.FC = () => {
         getFlightData();
     }, []);
 
-    const nextStep = (stepData: any) => {
+    type StepData = TravelDetails | TravelerInfo | AdditionalServices;
+
+    const nextStep = (stepData: StepData) => {
         setFormData((prev) => ({
             ...prev,
             [`step${prev.currentStep}`]: stepData,
