@@ -1,7 +1,7 @@
 export interface FlightOption {
     destination: string;
     class: 'Economy' | 'Business' | 'Firts Class';
-    price: number;
+    priceUSD: number;
 }
 
 export interface Passenger {
@@ -32,13 +32,14 @@ export interface TravelerInfo {
 
 export interface AdditionalServices {
     hasTravelInsurance: boolean;
-    hasPreferrendSeating: boolean;
-    specialAssistance: string;
+    hasPreferredSeating: boolean;
+    specialAssistance: boolean;
+    specialAssistanceNote: string;
 }
 
 export interface BookingSummary {
     travelDetails: TravelDetails;
-    travelerinfo: TravelerInfo;
+    travelerInfo: TravelerInfo;
     additionalServices: AdditionalServices;
     totalCost: number;
 }

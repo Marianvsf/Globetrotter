@@ -12,7 +12,7 @@ export default function Home() {
       <div className="m-auto container">
         <Navbar />
         <main>
-          <div className="m-auto max-w-screen-xl">
+          <div className="bg-gray-900 m-auto max-w-screen-xl">
             <Header />
             <TravelForm />
           </div>
