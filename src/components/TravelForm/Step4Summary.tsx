@@ -70,7 +70,7 @@ const Step4Summary: React.FC<Step4SummaryProps> = ({ travelData, onConfirm, onBa
                     <strong>Asistencia Especial:</strong> {additionalServices.specialAssistance ? 'Sí' : 'No'}
                     {additionalServices.specialAssistance && additionalServices.specialAssistanceNote && (
                         <span className="block text-sm text-gray-600 italic ml-4">
-                            Nota: "{additionalServices.specialAssistanceNote}"
+                            Nota: {additionalServices.specialAssistanceNote}
                         </span>
                     )}
                 </p>

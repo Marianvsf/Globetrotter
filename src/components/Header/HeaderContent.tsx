@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from "next/navigation";
 
 const HeaderContent: React.FC = () => {
-    const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const images: string[] = [
         "https://images.pexels.com/photos/670261/pexels-photo-670261.jpeg",
