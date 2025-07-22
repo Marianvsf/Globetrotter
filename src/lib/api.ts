@@ -8,10 +8,8 @@ export const fetchFlightOptions = async (): Promise<FlightOption[]> => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data: FlightOption[] = await response.json();
-        console.log(data)
         return data;
     } catch (error) {
-        console.error("Error al obtener las opciones de vuelo:", error);
         return [];
     }
 };
